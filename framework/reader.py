@@ -15,9 +15,3 @@ class Reader:
     def __str__(self):
         config_dict = {s: dict(self.config.items(s)) for s in self.config.sections()}
         return str(config_dict)
-
-
-conf = Reader("/home/egorcik-c/University/Task-for-Kaspersky/config.ini")
-print(conf)
-conf = Reader()
-print(conf)
