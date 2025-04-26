@@ -112,7 +112,7 @@ def test_machine_id():
     try:
         uuid_obj = UUID(value)
     except ValueError:
-        pytest.fail(f"MachineId '{value}' не является корректным UUID")
+        assert False, f"MachineId '{value}' не является корректным UUID"
 
 
 def test_startup_traces():
@@ -147,7 +147,7 @@ def test_max_virtual_memory():
         assert True
     else:
         value_float = float(value)
-        assert 0 < value_float <= value_float
+        assert 0 < value_float <= 100
 
 
 def test_max_memory():
@@ -157,7 +157,7 @@ def test_max_memory():
         assert True
     else:
         value_float = float(value)
-        assert 0 < value_float <= value_float
+        assert 0 < value_float <= 100
 
 
 def test_ping_interval():
