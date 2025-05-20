@@ -1,11 +1,11 @@
 from configparser import ConfigParser
 import os
 
-class Reader:
-    DEFAULT_PATH = "./var/opt/kaspersky/config.ini"
+CONFIG_PATH: str = os.getenv("CONFIG_PATH")
 
-    def __init__(self, config_path=None):
-        self.path = config_path or os.getenv("CONFIG_PATH", self.DEFAULT_PATH)
+class Reader:
+    def __init__(self, config_path=CONFIG_PATH):
+        self.path = config_path
         self.config = ConfigParser()
         self.config.read(self.path)
 
