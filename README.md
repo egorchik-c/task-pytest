@@ -67,6 +67,7 @@ deactivate
 | test_max_memory | `MaxMemory` — "off", "auto" или число (0, 100] |
 | test_ping_interval | Значение `PingInterval` в диапазоне [100, 10000] |
 
+## P.S
 ### Проект выполнялся с использованием следующих средств
 - Ubuntu 24.04.2
 - Python 3.12.3
