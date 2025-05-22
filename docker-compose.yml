@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  config-test:
+    build: ./tests
+    container_name: tests-config
+    environment:
+      - CONFIG_PATH=../../var/opt/kaspersky/config.ini
+    volumes:
+      - ./framework:/work/framework/
+      - ./var/opt/kaspersky:/var/opt/kaspersky
+  

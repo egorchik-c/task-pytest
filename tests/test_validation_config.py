@@ -1,11 +1,14 @@
 import pytest
+import sys
+import os
+print(sys.path)
 from framework.reader import Reader
 import re
 from uuid import UUID
 from pathlib import Path
 
-
-validation = Reader()
+CONFIG_PATH: str = os.getenv("CONFIG_PATH")
+validation = Reader(CONFIG_PATH)
 
 
 def test_general_exists():
